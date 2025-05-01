@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo Installing build dependencies...
+  build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/**
+
