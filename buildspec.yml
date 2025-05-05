@@ -1,4 +1,5 @@
 version: 0.2
+
 phases:
   install:
     commands:
@@ -6,9 +7,12 @@ phases:
   build:
     commands:
       - echo Build completed on `date`
+  post_build:
+    commands:
+      - echo Packaging artifacts...
+      - zip -r build_output.zip index.html appspec.yml scripts/
+
 artifacts:
   files:
-    - index.html
-    - appspec.yml
-    - scripts/**
-
+    - build_output.zip
+  discard-paths: yes
