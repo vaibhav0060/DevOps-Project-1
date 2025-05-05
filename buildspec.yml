@@ -1,5 +1,9 @@
 version: 0.2
 
+env:
+  variables:
+    AWS_SDK_LOAD_CONFIG: 1
+
 phases:
   install:
     commands:
